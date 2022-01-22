@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(32, 30, 30, 0.87);
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.background-img {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.bg-mobile-dark {
+  width: 100%;
+  object-fit: cover;
+}
+.container {
+  width: 100%;
+  max-width: 80%;
+  margin-top: 7rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  color: white;
+  letter-spacing: 11px;
+}
+.newTodo {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  height: 70px;
+
+  background-color: rgb(72, 75, 106);
+
+  border-radius: 5px;
+  display: flex;
+}
+
+
+.input-todo {
+  display: flex;
+  flex-grow: 1;
+}
+.input-todo input {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+ul li {
+  display: flex;
+  width: 100%;
+border-bottom: 1px solid rgb(100, 100, 97);
+  background-color: rgb(72, 75, 106);
+  align-items: center;
+  padding: 15px;
+  position: relative;
+}
+.item .checkmark {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid rgb(100, 100, 97);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.item .checkmark .cb {
+  transform: scale(1.8);
+  opacity: 0;
+}
+.item .text{
+	margin-right: auto;
+	margin-left: 15px;
+}
+.todo-list .item .text1{
+	text-decoration: line-through;
+}
+.item .checkmark .cb:checked + .check {
+  background: url(../images/check.svg),
+    linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item .checkmark .check {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+
+
+.item i:last-child {
+  margin-left: auto;
+}
+.item i.de:hover {
+  color: #af0000;
+  cursor: pointer;
+}
+.item i.co {
+  margin-right: 15px;
+}
+.item i.co:hover {
+  color: #af0000;
+  cursor: pointer;
+}
+.clear,.clearComplete{
+  cursor: pointer;
+}
+
+
+
+button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 20px;
+  color: white;
+}
+
+.count-item {
+  background-color: rgb(72, 75, 106);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.footer {
+  background-color: rgb(72, 75, 106);
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+.footer p {
+  padding: 10px;
+}
+.todo-list .item.remove {
+  pointer-events: none;
+  animation: remove 0.2s forwards;
+}
+
+@keyframes remove {
+  0% {
+    opacity: 0.5;
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+}
+.text.checked {
+  text-decoration: line-through;
+  color: var(--clr-gb-3);
+  text-decoration-color: rgb(43, 43, 230);
+}
+
+.footer .on{
+    color:rgb(16, 16, 128); 
+}
+
+@media screen and (min-width: 600px) {
+
+  div .bg-mobile-dark {
+    max-height: 300px;
+    object-fit: cover;
+  }
+  
+}

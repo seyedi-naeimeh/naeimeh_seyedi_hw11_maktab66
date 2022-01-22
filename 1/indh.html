@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Titillium+Web"
+    />
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>TO DO List</title>
+  </head>
+  <body>
+    <div class="background-img">
+      <img src="./images/bg-mobile-dark.jpg" class="bg-mobile-dark" />
+    </div>
+    <div class="container">
+      <div class="header">
+        <div class="title">
+          <h2>TODO</h2>
+        </div>
+        <div>
+          <img src="./images/icons8-sun-30.png" />
+        </div>
+      </div>
+      <div class="newTodo">
+        <div class="input-todo input">
+          <input
+            type="text"
+            placeholder="Create a new todo..."
+            id="input"
+            class="show"
+          />
+        </div>
+      </div>
+      <div class="content">
+        <ul id="list" class="todo-list">
+       
+         
+        </ul>
+
+        <div class="count-item">
+          <p class="corner">
+            <span id="item-left">0</span> items Left</p>
+          <p class="clearComplete">Clear Completed</p>
+        </div>
+        <div class="footer">
+          <p id="all" class="on">ALL</p>
+          <p id="todo-active">Active</p>
+          <p id="todo-complete">Completed</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="tstj.js"></script>
+  </body>
+</html>
